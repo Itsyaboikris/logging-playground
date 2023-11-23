@@ -1,0 +1,11 @@
+groups:
+- name: rules_test
+  rules:
+  - alerts: HighErrorRate
+    expr: app_errors_total > 5
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High Error rate Detected"
+      description: "Error rate has exceeded the threshold for the last 1 minute."

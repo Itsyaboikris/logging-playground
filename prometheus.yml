@@ -1,0 +1,6 @@
+rules_files:
+  - './prometheus.rules'
+scrape_configs:
+  - job_name: 'nodejs-app'
+    static_configs:
+      - targets: ['nodejs-app:9198']
